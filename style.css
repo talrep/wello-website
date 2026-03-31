@@ -52,14 +52,14 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-container {
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px;
+  height: 84px;
 }
 .nav-logo { display: flex; align-items: center; }
 .logo-svg {
-  height: 38px; width: auto; color: white;
+  height: 44px; width: auto; color: white;
 }
 .logo-img {
-  height: 52px; width: auto; display: block;
+  height: 72px; width: auto; display: block;
 }
 .nav-links {
   display: flex; gap: 4px; align-items: center;
