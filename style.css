@@ -405,7 +405,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ============ FOOTER ============ */
 .footer {
-  background: var(--bg-dark); color: white; padding: 64px 0 32px;
+  background: var(--primary); color: white; padding: 64px 0 32px;
 }
 .footer-content {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
