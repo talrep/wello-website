@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wello Pet Health | Comprehensive Pet Care Solutions for Vet Clinics</title>
+<meta name="description" content="Wello Pet Health partners exclusively with vet clinics, providing expert support and a wide range of pet care solutions. International expertise meets local insight.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Wello Pet Health" class="logo-img">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link" data-en="Home" data-vi="Trang chu">Home</a>
+      <a href="#about" class="nav-link" data-en="About" data-vi="Ve chung toi">About</a>
+      <a href="#products" class="nav-link" data-en="Products" data-vi="San pham">Products</a>
+      <a href="#why-wello" class="nav-link" data-en="Why Wello" data-vi="Tai sao Wello">Why Wello</a>
+      <a href="founder.html" class="nav-link" data-en="Management" data-vi="Ban Lanh dao">Management</a>
+      <a href="#contact" class="nav-link" data-en="Contact" data-vi="Lien he">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" onclick="toggleLang()">
+        <span class="lang-flag">&#127891;</span>
+        <span id="langLabel">VI</span>
+      </button>
+      <button class="mobile-menu" id="mobileMenu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-bg-pattern"></div>
+  <div class="container hero-content">
+    <div class="hero-text">
+      <div class="hero-badge" data-en="Trusted by Veterinary Clinics across Vietnam" data-vi="Duoc cac phong kham thu y tai Viet Nam tin tuong">Trusted by Veterinary Clinics across Vietnam</div>
+      <h1>
+        <span data-en="Comprehensive Pet Care Solutions" data-vi="Giai phap Cham soc Thu cung Toan dien">Comprehensive Pet Care Solutions</span>
+        <span class="hero-accent" data-en="for Vet Clinics" data-vi="cho Phong kham Thu y">for Vet Clinics</span>
+      </h1>
+      <p class="hero-desc" data-en="We partner exclusively with clinics, providing expert support and a wide range of solutions. International expertise meets local insight." data-vi="Chung toi hop tac doc quyen voi cac phong kham, cung cap ho tro chuyen mon va nhieu giai phap da dang. Chuyen mon quoc te ket hop voi hieu biet dia phuong.">We partner exclusively with clinics, providing expert support and a wide range of solutions. International expertise meets local insight.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary" data-en="Explore Our Products" data-vi="Kham pha San pham">Explore Our Products</a>
+        <a href="#contact" class="btn btn-outline" data-en="Partner With Us" data-vi="Hop tac voi Chung toi">Partner With Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">7+</span>
+          <span class="stat-label" data-en="Product Lines" data-vi="Dong San pham">Product Lines</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">B2B</span>
+          <span class="stat-label" data-en="Vet Clinic Exclusive" data-vi="Doc quyen Phong kham">Vet Clinic Exclusive</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">FR+VN</span>
+          <span class="stat-label" data-en="International Expertise" data-vi="Chuyen mon Quoc te">International Expertise</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-illustration">
+          <!-- Dog and cat silhouette with heart -->
+          <svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1565A0;stop-opacity:0.15"/>
+                <stop offset="100%" style="stop-color:#4AA8D8;stop-opacity:0.08"/>
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="175" r="140" fill="url(#heroGrad)"/>
+            <!-- Heart shape -->
+            <path d="M200 280 C200 280 90 200 90 140 C90 100 130 80 160 100 C180 115 195 135 200 150 C205 135 220 115 240 100 C270 80 310 100 310 140 C310 200 200 280 200 280Z" fill="none" stroke="#1565A0" stroke-width="2" opacity="0.3"/>
+            <!-- Dog silhouette -->
+            <g transform="translate(120, 120) scale(0.5)" fill="#1565A0" opacity="0.8">
+              <path d="M50 200 C50 200 30 180 25 160 C20 140 30 120 40 110 C50 100 45 80 50 60 C55 40 70 30 80 35 C90 40 85 60 90 70 C95 80 110 75 130 75 C150 75 165 80 170 70 C175 60 170 40 180 35 C190 30 205 40 210 60 C215 80 210 100 220 110 C230 120 240 140 235 160 C230 180 210 200 210 200 L210 260 C210 270 200 275 195 260 L195 230 L180 230 L180 260 C180 270 170 275 165 260 L165 230 L95 230 L95 260 C95 270 85 275 80 260 L80 230 L65 230 L65 260 C65 270 55 275 50 260 Z"/>
+              <!-- Dog ear -->
+              <ellipse cx="70" cy="55" rx="20" ry="30" transform="rotate(-15, 70, 55)"/>
+              <ellipse cx="190" cy="55" rx="20" ry="30" transform="rotate(15, 190, 55)"/>
+              <!-- Dog eye -->
+              <circle cx="100" cy="100" r="8" fill="white"/>
+              <circle cx="100" cy="100" r="4" fill="#0d3f66"/>
+              <circle cx="160" cy="100" r="8" fill="white"/>
+              <circle cx="160" cy="100" r="4" fill="#0d3f66"/>
+              <!-- Dog nose -->
+              <ellipse cx="130" cy="130" rx="12" ry="8" fill="#0d3f66"/>
+            </g>
+            <!-- Cat silhouette -->
+            <g transform="translate(230, 160) scale(0.35)" fill="#4AA8D8" opacity="0.8">
+              <path d="M30 50 L10 10 L50 40 L90 40 L130 10 L110 50 C120 60 125 80 125 100 L125 200 C125 210 115 215 110 200 L110 180 L100 180 L100 200 C100 210 90 215 85 200 L85 180 L55 180 L55 200 C55 210 45 215 40 200 L40 180 L30 180 L30 200 C30 210 20 215 15 200 L15 100 C15 80 20 60 30 50Z"/>
+              <!-- Cat eyes -->
+              <circle cx="50" cy="65" r="8" fill="white"/>
+              <ellipse cx="50" cy="65" rx="3" ry="6" fill="#0d3f66"/>
+              <circle cx="90" cy="65" r="8" fill="white"/>
+              <ellipse cx="90" cy="65" rx="3" ry="6" fill="#0d3f66"/>
+              <!-- Cat nose -->
+              <path d="M67 80 L63 85 L72 85 Z" fill="#e88ca5"/>
+              <!-- Whiskers -->
+              <line x1="20" y1="78" x2="55" y2="82" stroke="#0d3f66" stroke-width="1.5"/>
+              <line x1="22" y1="88" x2="55" y2="86" stroke="#0d3f66" stroke-width="1.5"/>
+              <line x1="85" y1="82" x2="120" y2="78" stroke="#0d3f66" stroke-width="1.5"/>
+              <line x1="85" y1="86" x2="118" y2="88" stroke="#0d3f66" stroke-width="1.5"/>
+            </g>
+            <!-- Paw prints scattered -->
+            <g fill="#4AA8D8" opacity="0.2">
+              <circle cx="80" cy="80" r="5"/><circle cx="72" cy="72" r="3"/><circle cx="88" cy="72" r="3"/><circle cx="76" cy="66" r="2.5"/><circle cx="84" cy="66" r="2.5"/>
+              <circle cx="320" cy="100" r="5"/><circle cx="312" cy="92" r="3"/><circle cx="328" cy="92" r="3"/><circle cx="316" cy="86" r="2.5"/><circle cx="324" cy="86" r="2.5"/>
+              <circle cx="100" cy="300" r="4"/><circle cx="93" cy="293" r="2.5"/><circle cx="107" cy="293" r="2.5"/><circle cx="97" cy="288" r="2"/><circle cx="103" cy="288" r="2"/>
+            </g>
+            <!-- Heartbeat line -->
+            <path d="M60 175 L140 175 L155 155 L170 195 L185 165 L195 175 L340 175" fill="none" stroke="#1565A0" stroke-width="2" opacity="0.25" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="white"/></svg>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Who We Are" data-vi="Chung toi la ai">Who We Are</span>
+      <h2 data-en="International Expertise Meets Local Insight" data-vi="Chuyen mon Quoc te Ket hop Hieu biet Dia phuong">International Expertise Meets Local Insight</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="#1565A0" stroke-width="2"/><path d="M16 24 L22 30 L32 18" stroke="#1565A0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-en="Vet Clinic Exclusive" data-vi="Doc quyen Phong kham Thu y">Vet Clinic Exclusive</h3>
+        <p data-en="We partner exclusively with veterinary clinics. Our products are not sold in retail stores or online marketplaces, ensuring professional oversight for every pet treated." data-vi="Chung toi hop tac doc quyen voi cac phong kham thu y. San pham cua chung toi khong duoc ban tai cac cua hang ban le hay tren cac san thuong mai dien tu, dam bao su giam sat chuyen nghiep cho moi thu cung duoc dieu tri.">We partner exclusively with veterinary clinics. Our products are not sold in retail stores or online marketplaces, ensuring professional oversight for every pet treated.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="16" r="8" stroke="#1565A0" stroke-width="2"/><path d="M8 40 C8 32 16 26 24 26 C32 26 40 32 40 40" stroke="#1565A0" stroke-width="2" stroke-linecap="round"/><path d="M34 16 L44 6" stroke="#4AA8D8" stroke-width="2" stroke-linecap="round"/><circle cx="44" cy="6" r="4" stroke="#4AA8D8" stroke-width="1.5"/></svg>
+        </div>
+        <h3 data-en="Founded by Industry Experts" data-vi="Thanh lap boi Chuyen gia Nganh">Founded by Industry Experts</h3>
+        <p data-en="With over 20 years of experience in the global pet food and animal health industry, our founder Brice Proteau brings deep knowledge from leading international companies like ADM and Neovia." data-vi="Voi hon 20 nam kinh nghiem trong nganh thuc an cho thu cung va suc khoe dong vat toan cau, nha sang lap Brice Proteau mang den kien thuc sau rong tu cac cong ty quoc te hang dau nhu ADM va Neovia.">With over 20 years of experience in the global pet food and animal health industry, our founder Brice Proteau brings deep knowledge from leading international companies like ADM and Neovia.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 4 L28 16 L40 16 L30 24 L34 36 L24 28 L14 36 L18 24 L8 16 L20 16 Z" stroke="#1565A0" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-en="Palatable Chew Innovation" data-vi="Doi moi Vien nhai Ngon mieng">Palatable Chew Innovation</h3>
+        <p data-en="Our original concept of palatable soft chews makes treatment compliance easy. Because we know that once the pet is home, getting them to take medicine is always the hardest part." data-vi="Khai niem doc dao ve vien nhai mem ngon mieng cua chung toi giup viec tuan thu dieu tri de dang. Boi vi chung toi hieu rang khi thu cung da ve nha, viec cho chung uong thuoc luon la phan kho khan nhat.">Our original concept of palatable soft chews makes treatment compliance easy. Because we know that once the pet is home, getting them to take medicine is always the hardest part.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="24" r="10" stroke="#1565A0" stroke-width="2"/><circle cx="32" cy="24" r="10" stroke="#4AA8D8" stroke-width="2"/><path d="M24 16 C28 20 28 28 24 32 C20 28 20 20 24 16Z" fill="#1565A0" opacity="0.15"/></svg>
+        </div>
+        <h3 data-en="Vietnam Based, Globally Sourced" data-vi="Co so tai Viet Nam, Nguon luc Toan cau">Vietnam Based, Globally Sourced</h3>
+        <p data-en="Headquartered in Ho Chi Minh City's Thao Dien district, we combine local market understanding with globally sourced, evidence-based formulations for optimal pet health." data-vi="Tru so tai quan Thao Dien, Thanh pho Ho Chi Minh, chung toi ket hop hieu biet thi truong dia phuong voi cac cong thuc dua tren bang chung, nguon goc toan cau de mang lai suc khoe toi uu cho thu cung.">Headquartered in Ho Chi Minh City's Thao Dien district, we combine local market understanding with globally sourced, evidence-based formulations for optimal pet health.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="section products" id="products">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Our Solutions" data-vi="Giai phap cua chung toi">Our Solutions</span>
+      <h2 data-en="Medicines & Nutritional Supplements" data-vi="Thuoc & Thuc pham bo sung Dinh duong">Medicines & Nutritional Supplements</h2>
+      <p class="section-subtitle" data-en="Palatable soft chews for dogs and cats, targeting key health functions" data-vi="Vien nhai mem ngon mieng cho cho va meo, nham vao cac chuc nang suc khoe chinh">Palatable soft chews for dogs and cats, targeting key health functions</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card" style="--card-accent:#4CAF50">
+        <div class="product-badge" data-en="Dogs" data-vi="Cho">Dogs</div>
+        <div class="product-icon">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M32 8 C24 8 16 16 16 24 L16 40 C16 48 24 56 32 56 C40 56 48 48 48 40 L48 24 C48 16 40 8 32 8Z" stroke="#4CAF50" stroke-width="2.5" fill="#4CAF50" fill-opacity="0.1"/><path d="M24 28 L28 36 L36 36 L40 28" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="26" cy="24" r="2" fill="#4CAF50"/><circle cx="38" cy="24" r="2" fill="#4CAF50"/></svg>
+        </div>
+        <h3>SymGuard</h3>
+        <p class="product-target" data-en="Digestion & Gut Microbiome" data-vi="Tieu hoa & He vi sinh vat Duong ruot">Digestion & Gut Microbiome</p>
+        <p class="product-desc" data-en="Advanced probiotic formula supporting healthy digestion and balanced gut flora for dogs of all sizes." data-vi="Cong thuc probiotic tien tien ho tro tieu hoa khoe manh va can bang he vi sinh duong ruot cho cho moi kich co.">Advanced probiotic formula supporting healthy digestion and balanced gut flora for dogs of all sizes.</p>
+        <div class="product-tags">
+          <span data-en="Gut Health" data-vi="Suc khoe Duong ruot">Gut Health</span>
+          <span data-en="Probiotics" data-vi="Loi khuan">Probiotics</span>
+          <span data-en="Digestion" data-vi="Tieu hoa">Digestion</span>
+        </div>
+      </div>
+
+      <div class="product-card" style="--card-accent:#2196F3">
+        <div class="product-badge" data-en="Dogs" data-vi="Cho">Dogs</div>
+        <div class="product-icon">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M20 44 L20 20 C20 14 26 10 32 10 C38 10 44 14 44 20 L44 44" stroke="#2196F3" stroke-width="2.5"/><path d="M16 44 L48 44" stroke="#2196F3" stroke-width="2.5" stroke-linecap="round"/><circle cx="28" cy="30" r="3" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3" stroke-width="1.5"/><circle cx="36" cy="30" r="3" fill="#2196F3" fill-opacity="0.3" stroke="#2196F3" stroke-width="1.5"/><path d="M28 36 Q32 40 36 36" stroke="#2196F3" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        </div>
+        <h3>FlexSupport</h3>
+        <p class="product-target" data-en="Joint Health & Mobility" data-vi="Suc khoe Khop & Van dong">Joint Health & Mobility</p>
+        <p class="product-desc" data-en="Glucosamine and chondroitin enriched chews to support joint flexibility, mobility, and comfort in active and aging dogs." data-vi="Vien nhai giau glucosamine va chondroitin ho tro su linh hoat cua khop, kha nang van dong va su thoai mai cho cho nang dong va cho gia.">Glucosamine and chondroitin enriched chews to support joint flexibility, mobility, and comfort in active and aging dogs.</p>
+        <div class="product-tags">
+          <span data-en="Joints" data-vi="Khop">Joints</span>
+          <span data-en="Mobility" data-vi="Van dong">Mobility</span>
+          <span data-en="Bones" data-vi="Xuong">Bones</span>
+        </div>
+      </div>
+
+      <div class="product-card" style="--card-accent:#FF9800">
+        <div class="product-badge" data-en="Cats" data-vi="Meo">Cats</div>
+        <div class="product-icon">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M18 24 L12 8 L26 18 L38 18 L52 8 L46 24 C50 28 52 34 52 40 L52 52 L12 52 L12 40 C12 34 14 28 18 24Z" stroke="#FF9800" stroke-width="2.5" fill="#FF9800" fill-opacity="0.1"/><circle cx="26" cy="32" r="3" fill="#FF9800"/><circle cx="38" cy="32" r="3" fill="#FF9800"/><path d="M30 38 L32 40 L34 38" stroke="#FF9800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>CatGuard</h3>
+        <p class="product-target" data-en="Allergies & Immunity" data-vi="Di ung & Mien dich">Allergies & Immunity</p>
+        <p class="product-desc" data-en="Immune-boosting formula designed specifically for cats, helping manage allergic reactions and strengthening natural defenses." data-vi="Cong thuc tang cuong mien dich duoc thiet ke dac biet cho meo, giup kiem soat phan ung di ung va tang cuong kha nang phong ve tu nhien.">Immune-boosting formula designed specifically for cats, helping manage allergic reactions and strengthening natural defenses.</p>
+        <div class="product-tags">
+          <span data-en="Immunity" data-vi="Mien dich">Immunity</span>
+          <span data-en="Allergies" data-vi="Di ung">Allergies</span>
+          <span data-en="Wellness" data-vi="Suc khoe">Wellness</span>
+        </div>
+      </div>
+
+      <div class="product-card" style="--card-accent:#9C27B0">
+        <div class="product-badge" data-en="Cats & Small Dogs" data-vi="Meo & Cho nho">Cats & Small Dogs</div>
+        <div class="product-icon">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M32 12 C24 12 18 18 18 26 L18 38 C18 46 24 52 32 52 C40 52 46 46 46 38 L46 26 C46 18 40 12 32 12Z" stroke="#9C27B0" stroke-width="2.5" fill="#9C27B0" fill-opacity="0.1"/><path d="M26 28 L32 34 L38 28" stroke="#9C27B0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 40 L40 40" stroke="#9C27B0" stroke-width="2" stroke-linecap="round" opacity="0.5"/></svg>
+        </div>
+        <h3>UroBoost</h3>
+        <p class="product-target" data-en="Urinary Health" data-vi="Suc khoe Duong tiet nieu">Urinary Health</p>
+        <p class="product-desc" data-en="Specialized urinary tract support formula for cats and small dogs, promoting healthy kidney function and urinary pH balance." data-vi="Cong thuc ho tro duong tiet nieu chuyen biet cho meo va cho nho, thuc day chuc nang than khoe manh va can bang pH duong tiet nieu.">Specialized urinary tract support formula for cats and small dogs, promoting healthy kidney function and urinary pH balance.</p>
+        <div class="product-tags">
+          <span data-en="Urinary" data-vi="Tiet nieu">Urinary</span>
+          <span data-en="Kidney" data-vi="Than">Kidney</span>
+          <span data-en="pH Balance" data-vi="Can bang pH">pH Balance</span>
+        </div>
+      </div>
+
+      <div class="product-card" style="--card-accent:#E91E63">
+        <div class="product-badge" data-en="Dogs & Cats" data-vi="Cho & Meo">Dogs & Cats</div>
+        <div class="product-icon">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M20 16 C20 16 24 12 32 12 C40 12 44 16 44 16 L48 24 L44 32 L40 28 L36 36 L32 24 L28 36 L24 28 L20 32 L16 24 Z" stroke="#E91E63" stroke-width="2.5" fill="#E91E63" fill-opacity="0.1"/><path d="M16 40 L48 40 C48 48 40 54 32 54 C24 54 16 48 16 40Z" stroke="#E91E63" stroke-width="2" fill="#E91E63" fill-opacity="0.05"/></svg>
+        </div>
+        <h3>DermShield</h3>
+        <p class="product-target" data-en="Skin Soothing" data-vi="Lam diu Da">Skin Soothing</p>
+        <p class="product-desc" data-en="Anti-inflammatory and soothing formula to calm irritated skin, reduce itching, and support the skin barrier in dogs and cats." data-vi="Cong thuc chong viem va lam diu giup xoa diu da bi kich ung, giam ngua va ho tro hang rao bao ve da o cho va meo.">Anti-inflammatory and soothing formula to calm irritated skin, reduce itching, and support the skin barrier in dogs and cats.</p>
+        <div class="product-tags">
+          <span data-en="Skin" data-vi="Da">Skin</span>
+          <span data-en="Anti-itch" data-vi="Chong ngua">Anti-itch</span>
+          <span data-en="Soothing" data-vi="Lam diu">Soothing</span>
+        </div>
+      </div>
+
+      <div class="product-card" style="--card-accent:#00BCD4">
+        <div class="product-badge" data-en="Dogs & Cats" data-vi="Cho & Meo">Dogs & Cats</div>
+        <div class="product-icon">
+          <svg viewBox="0 0 64 64" fill="none"><ellipse cx="32" cy="32" rx="20" ry="16" stroke="#00BCD4" stroke-width="2.5" fill="#00BCD4" fill-opacity="0.1"/><path d="M22 28 C22 28 27 20 32 20 C37 20 42 28 42 28" stroke="#00BCD4" stroke-width="2" stroke-linecap="round"/><path d="M20 36 C24 42 28 44 32 44 C36 44 40 42 44 36" stroke="#00BCD4" stroke-width="2" stroke-linecap="round"/><line x1="32" y1="28" x2="32" y2="36" stroke="#00BCD4" stroke-width="2"/></svg>
+        </div>
+        <h3>DermCare</h3>
+        <p class="product-target" data-en="Healthy Skin & Coat" data-vi="Da & Long khoe manh">Healthy Skin & Coat</p>
+        <p class="product-desc" data-en="Essential fatty acids and vitamins for a shiny, healthy coat and strong skin. Supports overall dermatological wellness from the inside out." data-vi="Axit beo thiet yeu va vitamin cho bo long bong muot, khoe manh va da chac khoe. Ho tro suc khoe da lieu tong the tu ben trong.">Essential fatty acids and vitamins for a shiny, healthy coat and strong skin. Supports overall dermatological wellness from the inside out.</p>
+        <div class="product-tags">
+          <span data-en="Coat" data-vi="Bo long">Coat</span>
+          <span data-en="Omega-3" data-vi="Omega-3">Omega-3</span>
+          <span data-en="Vitamins" data-vi="Vitamin">Vitamins</span>
+        </div>
+      </div>
+
+      <div class="product-card product-card-dental" style="--card-accent:#1565A0">
+        <div class="product-badge" data-en="Dental" data-vi="Nha khoa">Dental</div>
+        <div class="product-icon">
+          <svg viewBox="0 0 64 64" fill="none"><path d="M24 12 C18 12 14 18 14 26 C14 34 18 44 22 52 C24 56 28 56 28 50 L30 38 C30 36 34 36 34 38 L36 50 C36 56 40 56 42 52 C46 44 50 34 50 26 C50 18 46 12 40 12 C36 12 34 16 32 16 C30 16 28 12 24 12Z" stroke="#1565A0" stroke-width="2.5" fill="#1565A0" fill-opacity="0.1"/></svg>
+        </div>
+        <h3>ProDen PlaqueOff</h3>
+        <p class="product-target" data-en="Dental & Oral Health" data-vi="Suc khoe Rang mieng">Dental & Oral Health</p>
+        <p class="product-desc" data-en="Seaweed-based powder that naturally reduces plaque and tartar build-up, promoting fresher breath and healthier gums for dogs and cats." data-vi="Bot lam tu tao bien giup giam mang bam va cao rang tu nhien, mang lai hoi tho thom mat hon va nuou khoe manh hon cho cho va meo.">Seaweed-based powder that naturally reduces plaque and tartar build-up, promoting fresher breath and healthier gums for dogs and cats.</p>
+        <div class="product-tags">
+          <span data-en="Dental" data-vi="Nha khoa">Dental</span>
+          <span data-en="Plaque" data-vi="Mang bam">Plaque</span>
+          <span data-en="Natural" data-vi="Tu nhien">Natural</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why Wello Section -->
+<section class="section why-wello" id="why-wello">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="For Veterinary Clinics" data-vi="Danh cho Phong kham Thu y">For Veterinary Clinics</span>
+      <h2 data-en="Why Partner With Wello?" data-vi="Tai sao Hop tac voi Wello?">Why Partner With Wello?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-number">01</div>
+        <h3 data-en="Exclusive Clinic Distribution" data-vi="Phan phoi Doc quyen qua Phong kham">Exclusive Clinic Distribution</h3>
+        <p data-en="Your clinic is the only place pet owners can access our products. This protects your margins and strengthens client relationships by making your clinic the sole provider." data-vi="Phong kham cua ban la noi duy nhat chu thu cung co the tiep can san pham cua chung toi. Dieu nay bao ve bien loi nhuan va tang cuong moi quan he khach hang bang cach bien phong kham cua ban thanh nha cung cap duy nhat.">Your clinic is the only place pet owners can access our products. This protects your margins and strengthens client relationships by making your clinic the sole provider.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-number">02</div>
+        <h3 data-en="Better Treatment Compliance" data-vi="Tuan thu Dieu tri Tot hon">Better Treatment Compliance</h3>
+        <p data-en="Palatable chews mean pets actually take their supplements. No more struggling with pills, powders, or liquids. Happy pets, happy owners, better outcomes." data-vi="Vien nhai ngon mieng co nghia la thu cung thuc su uong thuc pham bo sung. Khong con vat va voi vien thuoc, bot hay chat long. Thu cung vui ve, chu nhan hanh phuc, ket qua tot hon.">Palatable chews mean pets actually take their supplements. No more struggling with pills, powders, or liquids. Happy pets, happy owners, better outcomes.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-number">03</div>
+        <h3 data-en="Expert Technical Support" data-vi="Ho tro Ky thuat Chuyen gia">Expert Technical Support</h3>
+        <p data-en="Our team provides dedicated training, educational materials, and ongoing support so your staff can confidently recommend the right solutions for each patient." data-vi="Doi ngu cua chung toi cung cap dao tao chuyen biet, tai lieu giao duc va ho tro lien tuc de nhan vien cua ban co the tu tin gioi thieu giai phap phu hop cho tung benh nhan.">Our team provides dedicated training, educational materials, and ongoing support so your staff can confidently recommend the right solutions for each patient.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-number">04</div>
+        <h3 data-en="Evidence-Based Formulations" data-vi="Cong thuc Dua tren Bang chung">Evidence-Based Formulations</h3>
+        <p data-en="Every product is developed with scientific rigor and backed by clinical research, using globally sourced ingredients that meet international quality standards." data-vi="Moi san pham deu duoc phat trien voi su nghiem ngat khoa hoc va duoc ho tro boi nghien cuu lam sang, su dung nguyen lieu nguon goc toan cau dat tieu chuan chat luong quoc te.">Every product is developed with scientific rigor and backed by clinical research, using globally sourced ingredients that meet international quality standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-content">
+        <h2 data-en="Ready to Elevate Your Clinic's Pet Care?" data-vi="San sang Nang cao Cham soc Thu cung tai Phong kham?">Ready to Elevate Your Clinic's Pet Care?</h2>
+        <p data-en="Join the growing network of veterinary clinics partnering with Wello Pet Health. Let's discuss how our solutions can benefit your practice and your patients." data-vi="Tham gia mang luoi ngay cang phat trien cua cac phong kham thu y hop tac voi Wello Pet Health. Hay cung thao luan ve cach giai phap cua chung toi co the mang lai loi ich cho phong kham va benh nhan cua ban.">Join the growing network of veterinary clinics partnering with Wello Pet Health. Let's discuss how our solutions can benefit your practice and your patients.</p>
+        <a href="#contact" class="btn btn-primary btn-lg" data-en="Get In Touch" data-vi="Lien he Ngay">Get In Touch</a>
+      </div>
+      <div class="cta-decoration">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="white" fill-opacity="0.1"/>
+          <circle cx="100" cy="100" r="50" fill="white" fill-opacity="0.08"/>
+          <!-- Paw -->
+          <ellipse cx="100" cy="110" rx="18" ry="14" fill="white" fill-opacity="0.15"/>
+          <circle cx="85" cy="90" r="9" fill="white" fill-opacity="0.15"/>
+          <circle cx="115" cy="90" r="9" fill="white" fill-opacity="0.15"/>
+          <circle cx="78" cy="105" r="7" fill="white" fill-opacity="0.12"/>
+          <circle cx="122" cy="105" r="7" fill="white" fill-opacity="0.12"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Get In Touch" data-vi="Lien he">Get In Touch</span>
+      <h2 data-en="Contact Us" data-vi="Lien he voi Chung toi">Contact Us</h2>
+      <p class="section-subtitle" data-en="We'd love to hear from veterinary clinics interested in partnering with Wello" data-vi="Chung toi rat mong duoc nghe tu cac phong kham thu y quan tam den viec hop tac voi Wello">We'd love to hear from veterinary clinics interested in partnering with Wello</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1565A0" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3 data-en="Phone" data-vi="Dien thoai">Phone</h3>
+        <a href="tel:+84906800416">+84 90 680 04 16</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1565A0" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Email</h3>
+        <a href="mailto:admin@wellopethealth.com">admin@wellopethealth.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1565A0" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 data-en="Address" data-vi="Dia chi">Address</h3>
+        <p>Family Garden - 28 Thao Dien Street<br>Thao Dien Ward, Ho Chi Minh City<br>Vietnam</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1565A0" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </div>
+        <h3 data-en="Social" data-vi="Mang xa hoi">Social</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Wellopethealth/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/company/wellopethealth" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/wellopethealth" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Wello Pet Health" class="footer-logo">
+        <p data-en="Comprehensive pet care solutions for veterinary clinics. International expertise meets local insight." data-vi="Giai phap cham soc thu cung toan dien cho phong kham thu y. Chuyen mon quoc te ket hop hieu biet dia phuong.">Comprehensive pet care solutions for veterinary clinics. International expertise meets local insight.</p>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Quick Links" data-vi="Lien ket nhanh">Quick Links</h4>
+        <a href="#about" data-en="About Us" data-vi="Ve chung toi">About Us</a>
+        <a href="#products" data-en="Products" data-vi="San pham">Products</a>
+        <a href="#why-wello" data-en="Why Wello" data-vi="Tai sao Wello">Why Wello</a>
+        <a href="founder.html" data-en="Management" data-vi="Ban Lanh dao">Management</a>
+        <a href="#contact" data-en="Contact" data-vi="Lien he">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Products" data-vi="San pham">Products</h4>
+        <a href="#products">SymGuard</a>
+        <a href="#products">FlexSupport</a>
+        <a href="#products">CatGuard</a>
+        <a href="#products">UroBoost</a>
+        <a href="#products">DermShield</a>
+        <a href="#products">DermCare</a>
+        <a href="#products">ProDen PlaqueOff</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Connect" data-vi="Ket noi">Connect</h4>
+        <a href="https://www.facebook.com/Wellopethealth/" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/company/wellopethealth" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/wellopethealth" target="_blank">Instagram</a>
+        <a href="https://m.me/Wellopethealth" target="_blank">Messenger</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024-2026 Wello Pet Health. <span data-en="All rights reserved." data-vi="Moi quyen duoc bao luu.">All rights reserved.</span></p>
+      <p data-en="Ho Chi Minh City, Vietnam" data-vi="Thanh pho Ho Chi Minh, Viet Nam">Ho Chi Minh City, Vietnam</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

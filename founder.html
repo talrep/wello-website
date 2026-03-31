@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brice Proteau - Founder | Wello Pet Health</title>
+<meta name="description" content="Meet Brice Proteau, founder of Wello Pet Health. Over 20 years of international experience in pet food and animal health across Asia-Pacific.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Founder page specific styles */
+.founder-hero {
+  padding: 140px 0 80px;
+  background: linear-gradient(135deg, #0a2540 0%, #1565A0 100%);
+  color: white; position: relative; overflow: hidden;
+}
+.founder-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 70% 30%, rgba(74,168,216,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.05) 0%, transparent 40%);
+}
+.founder-hero-content {
+  display: grid; grid-template-columns: 1fr 2fr; gap: 60px;
+  align-items: center; position: relative; z-index: 2;
+}
+.founder-avatar {
+  width: 280px; height: 280px; border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.25);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  margin: 0 auto;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(74,168,216,0.3), rgba(21,101,160,0.5));
+}
+.founder-avatar img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+  display: block;
+}
+.founder-avatar-inner {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 72px; font-weight: 800; color: rgba(255,255,255,0.3);
+  font-family: 'Playfair Display', serif;
+}
+.founder-intro h1 {
+  font-size: 42px; font-weight: 800; margin-bottom: 8px;
+}
+.founder-title {
+  font-size: 18px; color: var(--accent); font-weight: 600;
+  margin-bottom: 8px;
+}
+.founder-company {
+  font-size: 15px; color: rgba(255,255,255,0.6); margin-bottom: 24px;
+}
+.founder-summary {
+  font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.85);
+  max-width: 560px;
+}
+.founder-links {
+  display: flex; gap: 12px; margin-top: 24px;
+}
+.founder-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 20px; border-radius: 8px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  color: white; font-size: 14px; font-weight: 500;
+  transition: var(--transition);
+}
+.founder-link:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.4);
+}
+.founder-link svg { width: 18px; height: 18px; }
+
+/* Timeline */
+.timeline-section { padding: 100px 0; }
+.timeline {
+  position: relative; max-width: 900px; margin: 0 auto;
+}
+.timeline::before {
+  content: ''; position: absolute;
+  left: 50%; transform: translateX(-50%);
+  top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(to bottom, var(--primary), var(--accent), transparent);
+}
+.timeline-item {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; margin-bottom: 48px; position: relative;
+}
+.timeline-item:nth-child(odd) .timeline-content { grid-column: 1; text-align: right; }
+.timeline-item:nth-child(odd) .timeline-spacer { grid-column: 2; }
+.timeline-item:nth-child(even) .timeline-spacer { grid-column: 1; }
+.timeline-item:nth-child(even) .timeline-content { grid-column: 2; }
+.timeline-dot {
+  position: absolute; left: 50%; top: 10px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--primary); border: 3px solid white;
+  box-shadow: 0 0 0 3px rgba(21,101,160,0.2);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.timeline-content {
+  background: white; border-radius: var(--radius);
+  padding: 28px; border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.timeline-content:hover {
+  box-shadow: var(--shadow-md); transform: translateY(-2px);
+}
+.timeline-date {
+  font-size: 13px; font-weight: 700; color: var(--primary);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+.timeline-role {
+  font-size: 18px; font-weight: 700; color: var(--bg-dark);
+  margin-bottom: 4px;
+}
+.timeline-company-name {
+  font-size: 15px; font-weight: 600; color: var(--accent);
+  margin-bottom: 12px;
+}
+.timeline-desc {
+  font-size: 14px; color: var(--text-light); line-height: 1.7;
+}
+.timeline-tags {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px;
+}
+.timeline-item:nth-child(odd) .timeline-tags { justify-content: flex-end; }
+.timeline-tags span {
+  padding: 3px 10px; border-radius: 6px;
+  font-size: 11px; font-weight: 600;
+  background: rgba(21,101,160,0.06); color: var(--primary);
+}
+
+/* Skills grid */
+.skills-section { background: var(--bg-alt); padding: 80px 0; }
+.skills-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  max-width: 900px; margin: 0 auto;
+}
+.skill-card {
+  background: white; border-radius: var(--radius);
+  padding: 28px; border: 1px solid var(--border);
+  text-align: center; transition: var(--transition);
+}
+.skill-card:hover {
+  box-shadow: var(--shadow-md); transform: translateY(-2px);
+}
+.skill-icon {
+  width: 56px; height: 56px; margin: 0 auto 16px;
+  background: rgba(21,101,160,0.08); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.skill-icon svg { width: 28px; height: 28px; stroke: var(--primary); fill: none; stroke-width: 2; }
+.skill-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--bg-dark); }
+.skill-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; }
+
+/* Vision quote */
+.vision-section { padding: 80px 0; text-align: center; }
+.vision-quote {
+  max-width: 700px; margin: 0 auto;
+  font-size: 24px; font-family: 'Playfair Display', serif;
+  font-weight: 600; color: var(--bg-dark);
+  line-height: 1.5; font-style: italic;
+  position: relative; padding: 40px 0;
+}
+.vision-quote::before {
+  content: '\201C'; position: absolute; top: -10px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 120px; color: rgba(21,101,160,0.08);
+  font-family: 'Playfair Display', serif; line-height: 1;
+}
+.vision-attribution {
+  margin-top: 20px; font-size: 15px; font-family: 'Inter', sans-serif;
+  font-style: normal; color: var(--primary); font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .founder-hero-content { grid-template-columns: 1fr; text-align: center; }
+  .founder-avatar { width: 200px; height: 200px; }
+  .founder-avatar-inner { width: 170px; height: 170px; font-size: 52px; }
+  .founder-summary { margin: 0 auto; }
+  .founder-links { justify-content: center; }
+  .founder-intro h1 { font-size: 32px; }
+  .timeline::before { left: 20px; }
+  .timeline-item { grid-template-columns: 1fr; gap: 0; padding-left: 48px; }
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content { grid-column: 1; text-align: left; }
+  .timeline-item:nth-child(odd) .timeline-tags { justify-content: flex-start; }
+  .timeline-spacer { display: none; }
+  .timeline-dot { left: 20px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .vision-quote { font-size: 20px; padding: 30px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="nav-logo">
+      <img src="images/logo.png" alt="Wello Pet Health" class="logo-img">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link" data-en="Home" data-vi="Trang chu">Home</a>
+      <a href="index.html#about" class="nav-link" data-en="About" data-vi="Ve chung toi">About</a>
+      <a href="index.html#products" class="nav-link" data-en="Products" data-vi="San pham">Products</a>
+      <a href="index.html#why-wello" class="nav-link" data-en="Why Wello" data-vi="Tai sao Wello">Why Wello</a>
+      <a href="founder.html" class="nav-link" data-en="Management" data-vi="Ban Lanh dao" style="color:var(--primary)">Management</a>
+      <a href="index.html#contact" class="nav-link" data-en="Contact" data-vi="Lien he">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" onclick="toggleLang()">
+        <span class="lang-flag">&#127891;</span>
+        <span id="langLabel">VI</span>
+      </button>
+      <button class="mobile-menu" id="mobileMenu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Founder Hero -->
+<section class="founder-hero">
+  <div class="container founder-hero-content">
+    <div class="founder-avatar">
+      <img src="images/brice.jpg" alt="Brice Proteau" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+      <div class="founder-avatar-inner" style="display:none">BP</div>
+    </div>
+    <div class="founder-intro">
+      <h1>Brice Proteau</h1>
+      <p class="founder-title" data-en="Founder & Managing Director" data-vi="Nha sang lap & Giam doc Dieu hanh">Founder & Managing Director</p>
+      <p class="founder-company">Wello Pet Health | Ho Chi Minh City, Vietnam</p>
+      <p class="founder-summary" data-en="An accomplished leader with over 20 years of international experience in the pet food and animal health industry across Asia-Pacific. Brice founded Wello Pet Health in 2023 to bridge the gap between international product excellence and local veterinary needs in Vietnam." data-vi="Mot nha lanh dao xuat sac voi hon 20 nam kinh nghiem quoc te trong nganh thuc an thu cung va suc khoe dong vat o khu vuc Chau A - Thai Binh Duong. Brice thanh lap Wello Pet Health vao nam 2023 de thu hep khoang cach giua su xuat sac san pham quoc te va nhu cau thu y dia phuong tai Viet Nam.">An accomplished leader with over 20 years of international experience in the pet food and animal health industry across Asia-Pacific. Brice founded Wello Pet Health in 2023 to bridge the gap between international product excellence and local veterinary needs in Vietnam.</p>
+      <div class="founder-links">
+        <a href="https://www.linkedin.com/in/brice-proteau-a1b55042/" target="_blank" rel="noopener" class="founder-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:admin@wellopethealth.com" class="founder-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision Quote -->
+<section class="vision-section">
+  <div class="container">
+    <div class="vision-quote" data-en="Treatment compliance is always complicated by the pet owner once home. With Wello, we created palatable solutions that pets love, so the health journey doesn't stop at the clinic door." data-vi="Viec tuan thu dieu tri luon bi phuc tap boi chu thu cung khi da ve nha. Voi Wello, chung toi tao ra cac giai phap ngon mieng ma thu cung yeu thich, de hanh trinh suc khoe khong dung lai o cua phong kham.">Treatment compliance is always complicated by the pet owner once home. With Wello, we created palatable solutions that pets love, so the health journey doesn't stop at the clinic door.</div>
+    <p class="vision-attribution">- Brice Proteau</p>
+  </div>
+</section>
+
+<!-- Career Timeline -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Career Journey" data-vi="Hanh trinh Su nghiep">Career Journey</span>
+      <h2 data-en="20+ Years of International Experience" data-vi="Hon 20 nam Kinh nghiem Quoc te">20+ Years of International Experience</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date" data-en="2023 - Present" data-vi="2023 - Hien tai">2023 - Present</div>
+          <div class="timeline-role" data-en="Founder & Managing Director" data-vi="Nha sang lap & Giam doc Dieu hanh">Founder & Managing Director</div>
+          <div class="timeline-company-name">Wello Pet Health</div>
+          <p class="timeline-desc" data-en="Founded Wello Pet Health in Ho Chi Minh City to bring innovative, palatable medicines and nutritional supplements for dogs and cats exclusively to veterinary clinics in Vietnam. Developed an original concept of soft chews targeting gut, skin, bones, and joints health." data-vi="Thanh lap Wello Pet Health tai Thanh pho Ho Chi Minh de mang cac loai thuoc va thuc pham bo sung dinh duong sang tao, ngon mieng cho cho va meo doc quyen den cac phong kham thu y tai Viet Nam. Phat trien khai niem doc dao ve vien nhai mem nham vao suc khoe duong ruot, da, xuong va khop.">Founded Wello Pet Health in Ho Chi Minh City to bring innovative, palatable medicines and nutritional supplements for dogs and cats exclusively to veterinary clinics in Vietnam. Developed an original concept of soft chews targeting gut, skin, bones, and joints health.</p>
+          <div class="timeline-tags">
+            <span data-en="Entrepreneurship" data-vi="Khoi nghiep">Entrepreneurship</span>
+            <span data-en="Pet Health" data-vi="Suc khoe Thu cung">Pet Health</span>
+            <span>Vietnam</span>
+          </div>
+        </div>
+        <div class="timeline-spacer"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-content">
+          <div class="timeline-date" data-en="~2018 - 2023" data-vi="~2018 - 2023">~2018 - 2023</div>
+          <div class="timeline-role" data-en="Vice President, Pet Food Business" data-vi="Pho Chu tich, Kinh doanh Thuc an Thu cung">Vice President, Pet Food Business</div>
+          <div class="timeline-company-name">Aboitiz Group</div>
+          <p class="timeline-desc" data-en="Led pet food business development for over 5 years, strengthening the group's presence across the Asia-Pacific region. Managed large accounts and implemented precise market strategies that drove sustained growth in a competitive landscape." data-vi="Lanh dao phat trien kinh doanh thuc an thu cung trong hon 5 nam, tang cuong su hien dien cua tap doan o khu vuc Chau A - Thai Binh Duong. Quan ly cac tai khoan lon va thuc hien cac chien luoc thi truong chinh xac thuc day tang truong ben vung trong moi truong canh tranh.">Led pet food business development for over 5 years, strengthening the group's presence across the Asia-Pacific region. Managed large accounts and implemented precise market strategies that drove sustained growth in a competitive landscape.</p>
+          <div class="timeline-tags">
+            <span data-en="Leadership" data-vi="Lanh dao">Leadership</span>
+            <span>Asia-Pacific</span>
+            <span data-en="Strategy" data-vi="Chien luoc">Strategy</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date" data-en="~2015 - 2018" data-vi="~2015 - 2018">~2015 - 2018</div>
+          <div class="timeline-role" data-en="Petcare Commercial Development Manager, APAC" data-vi="Giam doc Phat trien Thuong mai Petcare, APAC">Petcare Commercial Development Manager, APAC</div>
+          <div class="timeline-company-name">Archer Daniels Midland (ADM)</div>
+          <p class="timeline-desc" data-en="Drove commercial development for the petcare division across the Asia-Pacific region at one of the world's largest agricultural processors. Leveraged ADM's global resources and ingredient expertise to expand pet food solutions in emerging markets." data-vi="Thuc day phat trien thuong mai cho bo phan cham soc thu cung tai khu vuc Chau A - Thai Binh Duong tai mot trong nhung cong ty che bien nong san lon nhat the gioi. Tan dung nguon luc toan cau va chuyen mon ve nguyen lieu cua ADM de mo rong cac giai phap thuc an thu cung tai cac thi truong moi noi.">Drove commercial development for the petcare division across the Asia-Pacific region at one of the world's largest agricultural processors. Leveraged ADM's global resources and ingredient expertise to expand pet food solutions in emerging markets.</p>
+          <div class="timeline-tags">
+            <span data-en="Commercial Dev" data-vi="Phat trien TM">Commercial Dev</span>
+            <span>APAC</span>
+            <span data-en="Pet Food" data-vi="Thuc an Thu cung">Pet Food</span>
+          </div>
+        </div>
+        <div class="timeline-spacer"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-content">
+          <div class="timeline-date" data-en="~2012 - 2015" data-vi="~2012 - 2015">~2012 - 2015</div>
+          <div class="timeline-role" data-en="Asia Business Development Manager" data-vi="Giam doc Phat trien Kinh doanh Chau A">Asia Business Development Manager</div>
+          <div class="timeline-company-name">Neovia Group</div>
+          <p class="timeline-desc" data-en="Spearheaded business development efforts across Asian markets for Neovia (later acquired by ADM for $1.8B), a major French player in animal nutrition. Built strategic partnerships and expanded market access in a rapidly growing region." data-vi="Dan dat cac no luc phat trien kinh doanh o cac thi truong Chau A cho Neovia (sau do duoc ADM mua lai voi gia 1,8 ty USD), mot tap doan lon cua Phap trong nganh dinh duong dong vat. Xay dung quan he doi tac chien luoc va mo rong tiep can thi truong tai khu vuc dang phat trien nhanh chong.">Spearheaded business development efforts across Asian markets for Neovia (later acquired by ADM for $1.8B), a major French player in animal nutrition. Built strategic partnerships and expanded market access in a rapidly growing region.</p>
+          <div class="timeline-tags">
+            <span data-en="Business Dev" data-vi="Phat trien KD">Business Dev</span>
+            <span>Asia</span>
+            <span data-en="Animal Nutrition" data-vi="Dinh duong DV">Animal Nutrition</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date" data-en="~2008 - 2012" data-vi="~2008 - 2012">~2008 - 2012</div>
+          <div class="timeline-role" data-en="International Sales Director" data-vi="Giam doc Ban hang Quoc te">International Sales Director</div>
+          <div class="timeline-company-name">QALIAN (Neovia Group)</div>
+          <p class="timeline-desc" data-en="Directed international sales operations for QALIAN, a subsidiary of Neovia Group focused on animal health products. Managed cross-border commercial strategies and built distribution networks across multiple markets." data-vi="Chi dao hoat dong ban hang quoc te cho QALIAN, cong ty con cua Neovia Group tap trung vao san pham suc khoe dong vat. Quan ly cac chien luoc thuong mai xuyen bien gioi va xay dung mang luoi phan phoi tai nhieu thi truong.">Directed international sales operations for QALIAN, a subsidiary of Neovia Group focused on animal health products. Managed cross-border commercial strategies and built distribution networks across multiple markets.</p>
+          <div class="timeline-tags">
+            <span data-en="Int'l Sales" data-vi="Ban hang QT">Int'l Sales</span>
+            <span data-en="Distribution" data-vi="Phan phoi">Distribution</span>
+            <span data-en="Animal Health" data-vi="SK Dong vat">Animal Health</span>
+          </div>
+        </div>
+        <div class="timeline-spacer"></div>
+        <div class="timeline-dot"></div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-spacer"></div>
+        <div class="timeline-content">
+          <div class="timeline-date" data-en="Education" data-vi="Hoc van">Education</div>
+          <div class="timeline-role">IAE de Poitiers</div>
+          <div class="timeline-company-name" data-en="France" data-vi="Phap">France</div>
+          <p class="timeline-desc" data-en="Business and management studies at one of France's leading university institutes of business administration. Foundation in strategic management, marketing, and international business." data-vi="Nghien cuu kinh doanh va quan ly tai mot trong nhung vien quan tri kinh doanh dai hoc hang dau cua Phap. Nen tang ve quan tri chien luoc, tiep thi va kinh doanh quoc te.">Business and management studies at one of France's leading university institutes of business administration. Foundation in strategic management, marketing, and international business.</p>
+          <div class="timeline-tags">
+            <span data-en="MBA" data-vi="MBA">MBA</span>
+            <span>France</span>
+          </div>
+        </div>
+        <div class="timeline-dot"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Skills & Expertise -->
+<section class="skills-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Expertise" data-vi="Chuyen mon">Expertise</span>
+      <h2 data-en="Core Competencies" data-vi="Nang luc Cot loi">Core Competencies</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 data-en="International Business" data-vi="Kinh doanh Quoc te">International Business</h3>
+        <p data-en="Fluent in three languages with extensive cultural understanding across European and Asian markets." data-vi="Thong thao ba ngon ngu voi hieu biet van hoa sau rong o cac thi truong Chau Au va Chau A.">Fluent in three languages with extensive cultural understanding across European and Asian markets.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 data-en="Market Strategy" data-vi="Chien luoc Thi truong">Market Strategy</h3>
+        <p data-en="Proven expertise in market analysis and marketing strategy that guides companies toward sustained growth." data-vi="Chuyen mon da duoc chung minh trong phan tich thi truong va chien luoc tiep thi, dan dat cac cong ty huong toi tang truong ben vung.">Proven expertise in market analysis and marketing strategy that guides companies toward sustained growth.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 data-en="Key Account Management" data-vi="Quan ly Khach hang Chinh">Key Account Management</h3>
+        <p data-en="Deep competency in large account management, building long-term partnerships with major industry players." data-vi="Nang luc sau trong quan ly tai khoan lon, xay dung quan he doi tac lau dai voi cac doanh nghiep lon trong nganh.">Deep competency in large account management, building long-term partnerships with major industry players.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 data-en="Pet Food & Animal Health" data-vi="Thuc an Thu cung & SK Dong vat">Pet Food & Animal Health</h3>
+        <p data-en="Two decades of deep industry knowledge across pet nutrition, animal health, and veterinary products." data-vi="Hai thap ky kien thuc chuyen sau trong nganh ve dinh duong thu cung, suc khoe dong vat va san pham thu y.">Two decades of deep industry knowledge across pet nutrition, animal health, and veterinary products.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </div>
+        <h3 data-en="Business Development" data-vi="Phat trien Kinh doanh">Business Development</h3>
+        <p data-en="Mission-driven approach to innovating and opening new markets while maintaining alignment with sustainability and animal welfare values." data-vi="Cach tiep can dinh huong su menh de doi moi va mo cac thi truong moi, dong thoi duy tri su phu hop voi cac gia tri ben vung va phuc loi dong vat.">Mission-driven approach to innovating and opening new markets while maintaining alignment with sustainability and animal welfare values.</p>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <h3 data-en="Entrepreneurship" data-vi="Tinh than Khoi nghiep">Entrepreneurship</h3>
+        <p data-en="Founded Wello Pet Health, combining decades of corporate experience with startup agility to address unmet needs in Vietnam's pet care market." data-vi="Thanh lap Wello Pet Health, ket hop hang thap ky kinh nghiem doanh nghiep voi su nhanh nhen cua startup de dap ung nhu cau chua duoc thoa man tai thi truong cham soc thu cung Viet Nam.">Founded Wello Pet Health, combining decades of corporate experience with startup agility to address unmet needs in Vietnam's pet care market.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-content">
+        <h2 data-en="Connect with Brice" data-vi="Ket noi voi Brice">Connect with Brice</h2>
+        <p data-en="Interested in partnering with Wello Pet Health? Brice and the team are always eager to discuss how our solutions can support your veterinary practice." data-vi="Quan tam den viec hop tac voi Wello Pet Health? Brice va doi ngu luon san sang thao luan ve cach giai phap cua chung toi co the ho tro phong kham thu y cua ban.">Interested in partnering with Wello Pet Health? Brice and the team are always eager to discuss how our solutions can support your veterinary practice.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="mailto:admin@wellopethealth.com" class="btn btn-primary btn-lg" data-en="Send an Email" data-vi="Gui Email">Send an Email</a>
+          <a href="https://www.linkedin.com/in/brice-proteau-a1b55042/" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="background:rgba(255,255,255,0.15);box-shadow:none;border:1.5px solid rgba(255,255,255,0.3);" data-en="View LinkedIn" data-vi="Xem LinkedIn">View LinkedIn</a>
+        </div>
+      </div>
+      <div class="cta-decoration">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="80" fill="white" fill-opacity="0.1"/>
+          <circle cx="100" cy="100" r="50" fill="white" fill-opacity="0.08"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Wello Pet Health" class="footer-logo">
+        <p data-en="Comprehensive pet care solutions for veterinary clinics." data-vi="Giai phap cham soc thu cung toan dien cho phong kham thu y.">Comprehensive pet care solutions for veterinary clinics.</p>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Quick Links" data-vi="Lien ket nhanh">Quick Links</h4>
+        <a href="index.html" data-en="Home" data-vi="Trang chu">Home</a>
+        <a href="index.html#products" data-en="Products" data-vi="San pham">Products</a>
+        <a href="index.html#contact" data-en="Contact" data-vi="Lien he">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-en="Connect" data-vi="Ket noi">Connect</h4>
+        <a href="https://www.facebook.com/Wellopethealth/" target="_blank">Facebook</a>
+        <a href="https://www.linkedin.com/company/wellopethealth" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/wellopethealth" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024-2026 Wello Pet Health. <span data-en="All rights reserved." data-vi="Moi quyen duoc bao luu.">All rights reserved.</span></p>
+      <p data-en="Ho Chi Minh City, Vietnam" data-vi="Thanh pho Ho Chi Minh, Viet Nam">Ho Chi Minh City, Vietnam</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
